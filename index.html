@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css.map" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css.map" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/personal.css" type="text/css"/>
+    <script src="scripts/funcoes.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/iconlanche.ico">
+</head>
+<body>
+<nav>
+    <div class="container-fluid">
+        <header>
+            <div class="row">
+                <div id="Botoes" class="col">
+                <fieldset class="border p-2">
+                <legend class="w-auto">Ações</legend>
+                    <button id='btn1' type="button" class="btn btn-personal">Novo Pedido</button>
+                    <button id='btn2' type="button" class="btn btn-personal">Salvar Pedido</button>
+                    <button id='btn3' type="button" class="btn btn-personal">Fechar Pedido</button>
+                    <button id='btn4' type="button" class="btn btn-personal">Imprimir Cupom</button>
+                    <button id='btn5' type="button" class="btn btn-personal">Limpar Campos</button>
+                    <button id='btn6' type="button" class="btn btn-personal">Imprimir Todos Pedidos</button>
+                    <button id='btn7' type="button" class="btn btn-personal">Sair</button>
+                </fieldset>
+                </div>
+           </div>
+        </header>
+        <form id="formulariopedido">
+            <div class="row">
+                <div id="esquerda" class="col-sm-7">
+                    <fieldset class="border p-2">
+                    <legend class="w-auto">Dados</legend>
+                        <label for="codPed">Código do Pedido</label><br>
+                        <input class="form-control" type="number" id="codPed" disabled/><br>
+                        <label for="nome">Nome do Cliente</label><br>
+                        <input class="form-control" type="text" name="nome" id="nome"/>
+                    </fieldset>
+                    <div class="row">
+                        <div id="esquerda2" class="col-sm-8">
+                            <fieldset class="border p-2">
+                            <legend class="w-auto">Tipos de Lanche</legend>
+                                <select class="form-control" id="lanche" name="lanche">
+                                    <option value="cq">Cachorro Quente</option>
+                                    <option value="mq">Misto Quente</option>
+                                    <option value="xs">X-Salada</option>
+                                    <option value="xe">X-Egg</option>
+                                    <option value="xb">X-Bacon</option>
+                                    <option value="xt">X-Tudo</option>
+                                </select>
+                            </fieldset>  
+                            <div class="row">
+                                <div id="bebida" class="col-sm-6">
+                                    <fieldset class="border p-2">
+                                    <legend class="w-auto">bebidas</legend>
+                                        <input type = 'radio' name='bebida' id='S' value="S"/><label for='S'>Sim</label>
+                                        <input type = 'radio' name='bebida' id='N' value="N"/><label for='N'>Não</label>
+                                    </fieldset>
+                                </div>
+                                <div id="bebidagelada" class="col-sm-6">
+                                    <fieldset class="border p-2">
+                                    <legend class="w-auto">Bebida Gelada</legend>
+                                        <input type = 'radio' name='gelada' id='Si' value="S"><label for='Si'>Sim</label>
+                                        <input type = 'radio' name='gelada' id='Na' value="N"><label for='Na'>Não</label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="tipobebida" class="col">
+                                    <fieldset class="border p-2">
+                                    <legend class="w-auto">Tipo de Bebidas</legend>
+                                        <select class="form-control" id="tpbebida" name="tpbebida">
+                                            <option value="cc">Coca-Cola</option>
+                                            <option value="fl">Fanta Laranja</option>
+                                            <option value="fu">Fanta Uva</option>
+                                            <option value="fg">Fanta Guaraná</option>
+                                            <option value="cg">Chá Gelado</option>
+                                            <option value="su">Suco</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="data" class="col">
+                                    <fieldset class="border p-2">
+                                    <legend class="w-auto">Data</legend>
+                                        <input class="form-control" type="date" id="data" name="data">
+                                    </fieldset>
+                                </div>   
+                            </div>
+                        </div>
+                        <div id="Adicionais" class="col-sm-4">
+                            <fieldset class="border p-2">
+                            <legend class="w-auto">Adicionais</legend>
+                                <input type = 'radio' name='adicional' id='Sim' value="S"><label for='Sim'>Sim</label>
+                                <input type = 'radio' name='adicional' id='Nao' value="N" checked><label for='Nao'>Não</label>
+                            </fieldset>
+                            <div class="row">
+                                <div id="opadicionais" class="col-sm-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="obersavacao" class="col-sm-12">
+                            <fieldset class="border p-2">
+                                <legend class="w-auto">Observações</legend>
+                                    <textarea id="obs" class = 'form-control' name="obs" rows="2"></textarea>
+                                </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div id="pedido" class="col-sm-5">
+                    <fieldset class="border p-2">
+                    <legend class="w-auto">Pedido</legend>
+                        <textarea id="areapedido" class="form-control" name="areapedido" rows="18" placeholder="Os dados do pedido aparecerão aqui"></textarea>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+    </div>       
+    
+</nav>
+    
+</body>
+</html>
