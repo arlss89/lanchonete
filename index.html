@@ -37,15 +37,15 @@
                     <fieldset class="border p-2">
                     <legend class="w-auto">Dados</legend>
                         <label for="codPed">Código do Pedido</label><br>
-                        <input class="form-control" type="number" id="codPed" disabled/><br>
+                        <input class="form-control" type="number" name="codPed" id="idcodPed" disabled/><br>
                         <label for="nome">Nome do Cliente</label><br>
-                        <input class="form-control" type="text" name="nome" id="nome"/>
+                        <input class="form-control" type="text" name="nome" id="idnome" disabled/>
                     </fieldset>
                     <div class="row">
                         <div id="esquerda2" class="col-sm-8">
                             <fieldset class="border p-2">
                             <legend class="w-auto">Tipos de Lanche</legend>
-                                <select class="form-control" id="lanche" name="lanche">
+                                <select class="form-control" id="idlanche" name="lanche" disabled>
                                     <option value="cq">Cachorro Quente</option>
                                     <option value="mq">Misto Quente</option>
                                     <option value="xs">X-Salada</option>
@@ -58,15 +58,15 @@
                                 <div id="bebida" class="col-sm-6">
                                     <fieldset class="border p-2">
                                     <legend class="w-auto">bebidas</legend>
-                                        <input type = 'radio' name='bebida' id='S' value="S"/><label for='S'>Sim</label>
-                                        <input type = 'radio' name='bebida' id='N' value="N"/><label for='N'>Não</label>
+                                        <input type = 'radio' name='bebida' id='S' value="S" disabled/><label for='S'>Sim</label>
+                                        <input type = 'radio' name='bebida' id='N' value="N" disabled checked/><label for='N'>Não</label>
                                     </fieldset>
                                 </div>
                                 <div id="bebidagelada" class="col-sm-6">
                                     <fieldset class="border p-2">
                                     <legend class="w-auto">Bebida Gelada</legend>
-                                        <input type = 'radio' name='gelada' id='Si' value="S"><label for='Si'>Sim</label>
-                                        <input type = 'radio' name='gelada' id='Na' value="N"><label for='Na'>Não</label>
+                                        <input type = 'radio' name='gelada' id='Si' value="S" disabled/><label for='Si'>Sim</label>
+                                        <input type = 'radio' name='gelada' id='Na' value="N" disabled checked/><label for='Na'>Não</label>
                                     </fieldset>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                                 <div id="tipobebida" class="col">
                                     <fieldset class="border p-2">
                                     <legend class="w-auto">Tipo de Bebidas</legend>
-                                        <select class="form-control" id="tpbebida" name="tpbebida">
+                                        <select class="form-control" id="idtpbebida" name="tpbebida" disabled>
                                             <option value="cc">Coca-Cola</option>
                                             <option value="fl">Fanta Laranja</option>
                                             <option value="fu">Fanta Uva</option>
@@ -89,7 +89,7 @@
                                 <div id="data" class="col">
                                     <fieldset class="border p-2">
                                     <legend class="w-auto">Data</legend>
-                                        <input class="form-control" type="date" id="data" name="data">
+                                        <input class="form-control" type="date" id="iddata" name="data" disabled/>
                                     </fieldset>
                                 </div>   
                             </div>
@@ -97,8 +97,8 @@
                         <div id="Adicionais" class="col-sm-4">
                             <fieldset class="border p-2">
                             <legend class="w-auto">Adicionais</legend>
-                                <input type = 'radio' name='adicional' id='Sim' value="S"><label for='Sim'>Sim</label>
-                                <input type = 'radio' name='adicional' id='Nao' value="N" checked><label for='Nao'>Não</label>
+                                <input type = 'radio' name='adicional' id='Sim' value="S" disabled/><label for='Sim'>Sim</label>
+                                <input type = 'radio' name='adicional' id='Nao' value="N"  disabled checked/><label for='Nao'>Não</label>
                             </fieldset>
                             <div class="row">
                                 <div id="opadicionais" class="col-sm-4"></div>
@@ -109,7 +109,7 @@
                         <div id="obersavacao" class="col-sm-12">
                             <fieldset class="border p-2">
                                 <legend class="w-auto">Observações</legend>
-                                    <textarea id="obs" class = 'form-control' name="obs" rows="2"></textarea>
+                                    <textarea id="obs" class = 'form-control' name="obs" rows="2" disabled></textarea>
                                 </fieldset>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                 <div id="pedido" class="col-sm-5">
                     <fieldset class="border p-2">
                     <legend class="w-auto">Pedido</legend>
-                        <textarea id="areapedido" class="form-control" name="areapedido" rows="18" placeholder="Os dados do pedido aparecerão aqui"></textarea>
+                        <textarea id="areapedido" class="form-control" name="areapedido" rows="18" placeholder="Os dados do pedido aparecerão aqui" disabled></textarea>
                     </fieldset>
                 </div>
             </div>
