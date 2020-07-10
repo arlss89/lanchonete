@@ -17,5 +17,27 @@ window.onload = function(){
         document.querySelector("#idSim").disabled = false
     })
 
-    
+    document.querySelector('#S').addEventListener('click', function(){
+        if(document.querySelector('#S').checked == true){
+            document.querySelector('#idtpbebida').disabled = false
+        }
+    })
+        
+    document.querySelector('#N').addEventListener('click', function(){
+        if(document.querySelector('#N').checked == true){
+            document.querySelector('#idtpbebida').disabled = true
+        }
+    })
+
+    document.querySelector('#Sim').addEventListener('click', function(){
+        if(document.querySelector('#Sim').checked == true){
+            document.querySelector('#opadicionais').style.display = 'block'
+        }
+    })
+        
+    document.querySelector('#Nao').addEventListener('click', function(){
+        if(document.querySelector('#Nao').checked == true){
+            document.querySelector('#opadicionais').style.display = 'none'
+        }
+    })
 }
