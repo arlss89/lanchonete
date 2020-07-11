@@ -16,6 +16,10 @@ window.onload = function(){
         document.querySelector("#idobs").disabled = false
         document.querySelector("#idSim").disabled = false
     })
+    //Limpar os campos
+    document.querySelector('#btn5').addEventListener('click', function(){
+        document.getElementById("formulariopedido").reset();
+    })
     //para fechar a aba do navegador ao clicar em sair
     document.querySelector("#btn7").addEventListener('click', function(){
         if(window.confirm("Deseja sair?")) {
