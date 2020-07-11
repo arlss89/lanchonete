@@ -18,8 +18,8 @@ window.onload = function(){
     })
     //para fechar a aba do navegador ao clicar em sair
     document.querySelector("#btn7").addEventListener('click', function(){
-        window.close();
-    })
-
-    
+        if(window.confirm("Deseja sair?")) {
+            window.close();
+        }
+    })   
 }
