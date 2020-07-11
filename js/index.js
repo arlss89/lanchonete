@@ -16,6 +16,10 @@ window.onload = function(){
         document.querySelector("#idobs").disabled = false
         document.querySelector("#idSim").disabled = false
     })
+    //para fechar a aba do navegador ao clicar em sair
+    document.querySelector("#btn7").addEventListener('click', function(){
+        window.close();
+    })
 
     
 }
