@@ -21,7 +21,5 @@ window.onload = function(){
         if(window.confirm("Deseja fechar sair?")) {
             window.close();
         }
-    })
-
-    
+    })   
 }
