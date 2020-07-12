@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css.map" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css.map" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/personal.css" type="text/css"/>
-    <script src="scripts/funcoes.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete</title>
@@ -101,7 +100,17 @@
                                 <input type = 'radio' name='adicional' id='Nao' value="N"  disabled checked/><label for='Nao'>Não</label>
                             </fieldset>
                             <div class="row">
-                                <div id="opadicionais" class="col-sm-4"></div>
+                                <div id="opadicionais" class="col-sm-12">
+                                    <fieldset class="border p-2">
+                                    <legend class="w-auto">Adicionais</legend>
+                                        <input type="checkbox" id="idcat" name="add" value="Catchup">-Catchup<br>
+                                        <input type="checkbox" id="idmos" name="add" value="Mostarda">-Mostarda<br>
+                                        <input type="checkbox" id="idmai" name="add" value="Maionese">-Maionese<br>
+                                        <input type="checkbox" id="idbar" name="add" value="Barbecue">-Barbecue<br>
+                                        <input type="checkbox" id="idche" name="add" value="Cheddar">-Cheddar<br>
+                                        <input type="checkbox" id="idcatupiry" name="add" value="Catupiry">-Catupiry
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,7 +126,7 @@
                 <div id="pedido" class="col-sm-5">
                     <fieldset class="border p-2">
                     <legend class="w-auto">Pedido</legend>
-                        <textarea id="areapedido" class="form-control" name="areapedido" rows="18" placeholder="Os dados do pedido aparecerão aqui" disabled></textarea>
+                        <textarea id="areapedido" class="form-control" name="areapedido" rows="28" placeholder="Os dados do pedido aparecerão aqui" disabled></textarea>
                     </fieldset>
                 </div>
             </div>
