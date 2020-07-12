@@ -43,6 +43,7 @@ window.onload = function(){
             document.querySelector('#opadicionais').style.display = 'block'
         }
     })
+  
     //Comando para ocultar a lista de opcionais    
     document.querySelector('#Nao').addEventListener('click', function(){
         if(document.querySelector('#Nao').checked == true){
@@ -145,5 +146,14 @@ window.onload = function(){
         }
         return valor
     }
-   
+    //Limpar os campos
+    document.querySelector('#btn5').addEventListener('click', function(){
+        document.getElementById("formulariopedido").reset();
+    })
+    //para fechar a aba do navegador ao clicar em sair
+    document.querySelector("#btn7").addEventListener('click', function(){
+        if(window.confirm("Deseja sair?")) {
+            window.close();
+        }
+    })   
 }
