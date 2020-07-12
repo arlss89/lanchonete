@@ -126,6 +126,10 @@ window.onload = function(){
         document.querySelector('#btn3').addEventListener('click', function(){
             escolhaPedido.imprimir()
         })
+        document.querySelector("#btn4").addEventListener('click', function(){
+            var conteudo = escolhaPedido.imprimir()
+            imprimirPedido()
+        })
     })
     
     //Função para calcular o valor total do pedido
@@ -148,12 +152,26 @@ window.onload = function(){
     }
     //Limpar os campos
     document.querySelector('#btn5').addEventListener('click', function(){
-        document.getElementById("formulariopedido").reset();
+        document.getElementById('formulariopedido').reset();
+        var campoLimpo = "";
+        document.querySelector('#areapedido').innerHTML = campoLimpo
     })
     //para fechar a aba do navegador ao clicar em sair
     document.querySelector("#btn7").addEventListener('click', function(){
         if(window.confirm("Deseja sair?")) {
             window.close();
         }
-    })   
+    })
+
+    //função para abrir janela de impressão
+    function imprimirPedido(){
+        childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
+        childWindow.document.open();
+        childWindow.document.write('<html><head></head><body>');
+        childWindow.document.write(document.getElementById('areapedido').value.replace(/\n/gi,'<br>'));
+        childWindow.document.write('</body></html>');
+        childWindow.print();
+        childWindow.document.close();
+        childWindow.close();
+    }
 }
