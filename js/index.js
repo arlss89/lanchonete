@@ -181,7 +181,31 @@ window.onload = function(){
         }
     })
 
-    //função para abrir janela de impressão
-    
-
+    //imprimir todos os pedidos
+    document.querySelector("#btn6").addEventListener('click', function(){
+              
+        
+        childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
+                childWindow.document.open();
+                childWindow.document.write('<html><head></head><body>');
+                
+                for(var i in pedidos){
+                
+                    childWindow.document.write(                    
+                        "<textarea rows='15'>Nome: " + pedidos[i].nomeCliente + "\n" +
+                        "Pedido: " + pedidos[i].codigoPedido + "\n" +
+                        "Lanche: " + pedidos[i].lanche + "\n" +
+                        "Adicionais: " + pedidos[i].adicionais + "\n" +
+                        "Bebida: " + pedidos[i].bebida + "\n" +
+                        "Bebida Gelada: " + pedidos[i].gelada + "\n" +
+                        "Observaçôes: " + pedidos[i].observacoes + "\n" +
+                        "Total do Pedido: R$" + pedidos[i].total + "\n</textarea>"
+                        )
+                }
+                childWindow.document.write('</body></html>');
+                childWindow.print();
+                childWindow.doc.close();
+                childWindow.close();
+        
+    })
 }
