@@ -5,7 +5,7 @@ window.onload = function(){
     adicionais = []
     pedidos = []
 
-    //teste
+    //Contador para os popups abertos
     qtd = 1
     
 
