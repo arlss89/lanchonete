@@ -22,8 +22,12 @@ window.onload = function(){
         document.querySelector("#Sim").disabled = false
         document.querySelector("#Nao").disabled = false
         document.querySelector("#idobs").disabled = false
-        //document.querySelector("#idSim").disabled = false
+        document.querySelector("#btn2").disabled = false
+        document.querySelector("#btn5").disabled = false
+        document.querySelector("#btn3").disabled = true
+        document.querySelector("#btn4").disabled = true
     })
+
     //Comando para Habilitar os tipos de bebidas
     document.querySelector('#S').addEventListener('click', function(){
         if(document.querySelector('#S').checked == true){
@@ -131,15 +135,19 @@ window.onload = function(){
                 childWindow.close();
             }
         }
+        document.querySelector("#btn3").disabled = false
+        document.querySelector("#btn4").disabled = false
+
         //Comando para criar objeto e para adicionar  o pedido em um vetor
         var escolhaPedido = Object.create(objpedido)
         pedidos.push(escolhaPedido)
 
-        //Configuração do botão Imprimir pedido
+        //Configuração do botão Fechar pedido
         document.querySelector('#btn3').addEventListener('click', function(){
             escolhaPedido.imprimir()
+            document.querySelector("#btn2").disabled = true
         })
-        
+        //Configuração do botão Imprimir pedido
         document.querySelector("#btn4").addEventListener('click', function(){
             var conteudo = this.escolhaPedido
             if(qtd ==1){
@@ -173,6 +181,14 @@ window.onload = function(){
         document.getElementById('formulariopedido').reset();
         var campoLimpo = "";
         document.querySelector('#areapedido').innerHTML = campoLimpo
+        if(document.querySelector('#N').checked == true){
+            document.querySelector('#idtpbebida').disabled = true
+            document.querySelector("#Si").disabled = true
+            document.querySelector("#Na").disabled = true
+        }
+        if(document.querySelector('#Nao').checked == true){
+            document.querySelector('#opadicionais').style.display = 'none'
+        }
     })
     //para fechar a aba do navegador ao clicar em sair
     document.querySelector("#btn7").addEventListener('click', function(){
