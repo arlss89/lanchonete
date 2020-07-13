@@ -127,9 +127,9 @@ window.onload = function(){
             escolhaPedido.imprimir()
         })
         document.querySelector("#btn4").addEventListener('click', function(){
-            var conteudo = escolhaPedido.imprimir()
+            var conteudo = this.escolhaPedido
             imprimirPedido()
-        })
+        })  
     })
     
     //Função para calcular o valor total do pedido
@@ -174,4 +174,5 @@ window.onload = function(){
         childWindow.document.close();
         childWindow.close();
     }
+
 }
