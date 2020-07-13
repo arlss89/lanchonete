@@ -4,6 +4,9 @@ window.onload = function(){
     //vetor para anotar os adicionais e os pedidos
     adicionais = []
     pedidos = []
+
+    //teste
+    qtd = 1
     
 
     //Configuração do botão Novo Pedido
@@ -136,10 +139,15 @@ window.onload = function(){
         document.querySelector('#btn3').addEventListener('click', function(){
             escolhaPedido.imprimir()
         })
+        
         document.querySelector("#btn4").addEventListener('click', function(){
             var conteudo = this.escolhaPedido
-            escolhaPedido.imprimirPedido()
+            if(qtd ==1){
+                escolhaPedido.imprimirPedido()
+                qtd++
+            }
         })  
+        qtd=1
     })
     
     //Função para calcular o valor total do pedido
