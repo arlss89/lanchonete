@@ -116,6 +116,16 @@ window.onload = function(){
                 "Observaçôes: " + this.observacoes + "\n" +
                 "Total do Pedido: R$" + this.total
                 document.querySelector('#areapedido').innerHTML = imprimir
+            },
+            imprimirPedido: function(){
+                childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
+                childWindow.document.open();
+                childWindow.document.write('<html><head></head><body>');
+                childWindow.document.write(document.getElementById('areapedido').value.replace(/\n/gi,'<br>'));
+                childWindow.document.write('</body></html>');
+                childWindow.print();
+                childWindow.document.close();
+                childWindow.close();
             }
         }
         //Comando para criar objeto e para adicionar  o pedido em um vetor
@@ -128,7 +138,7 @@ window.onload = function(){
         })
         document.querySelector("#btn4").addEventListener('click', function(){
             var conteudo = this.escolhaPedido
-            imprimirPedido()
+            escolhaPedido.imprimirPedido()
         })  
     })
     
@@ -164,15 +174,6 @@ window.onload = function(){
     })
 
     //função para abrir janela de impressão
-    function imprimirPedido(){
-        childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
-        childWindow.document.open();
-        childWindow.document.write('<html><head></head><body>');
-        childWindow.document.write(document.getElementById('areapedido').value.replace(/\n/gi,'<br>'));
-        childWindow.document.write('</body></html>');
-        childWindow.print();
-        childWindow.document.close();
-        childWindow.close();
-    }
+    
 
 }
